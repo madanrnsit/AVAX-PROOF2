@@ -61,7 +61,7 @@ export default function HomePage() {
 
   const summultiples = async() => {
     if (atm) {
-      let tx = await atm.multiplest(5,4);
+      let tx = await atm.multiples(5,4);
       await tx.wait()
       getBalance();
     }
@@ -94,8 +94,8 @@ export default function HomePage() {
       <div>
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
-        <button onClick={deposit}>Sum of multiples</button>
-        <button onClick={withdraw}>Sum of first 5 odd or even numbers</button>
+        <button onClick={summultiples}>Sum of multiples</button>
+        <button onClick={oddeven}>Sum of first 5 odd or even numbers</button>
       </div>
     )
   }
