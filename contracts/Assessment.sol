@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 //import "hardhat/console.sol";
 
 contract Assessment {
-
+    uint public balance;
     constructor(uint initBalance) payable {
         
         balance = initBalance;
@@ -14,18 +14,17 @@ contract Assessment {
         return balance;
     }
 
-    function multiples(uint256 number,unit256 n) public payable {
+    function multiples(uint256 number,uint256 n) public payable {
         uint256 sum=0;
         uint256 i;
-        for(i=0,i<=n;i++)
-       {
-        sum += i*number
+        for(i=0;i<=n;i++){
+        sum += i*number;
        } 
        balance=sum;
     }
 
     function oddeven(uint256 number) public {
-       unit256 sum=0;
+       uint256 sum=0;
        if(number%2==0)
        {
         sum+=2+4+6+8+10;
@@ -34,7 +33,6 @@ contract Assessment {
        {
         sum+=1+3+5+7+9;
        }
-       balance=sum;
-
+       balance =sum;
     }
 }
