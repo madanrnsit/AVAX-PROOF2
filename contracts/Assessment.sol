@@ -14,25 +14,16 @@ contract Assessment {
         return balance;
     }
 
-    function multiples(uint256 number,uint256 n) public payable {
-        uint256 sum=0;
-        uint256 i;
-        for(i=0;i<=n;i++){
-        sum += i*number;
-       } 
-       balance=sum;
+    function defe(uint256 n) public payable {
+        
+        uint256 def;
+        def=(balance-n);
+       balance=def;
     }
 
-    function oddeven(uint256 number) public {
-       uint256 sum=0;
-       if(number%2==0)
-       {
-        sum+=2+4+6+8+10;
-       }
-       else
-       {
-        sum+=1+3+5+7+9;
-       }
-       balance =sum;
+    function fix(uint256 n) public {
+       uint256 def;
+       def=balance+n;
+       balance =def;
     }
 }
