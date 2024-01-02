@@ -94,8 +94,8 @@ export default function HomePage() {
       <div>
         <p>Your Account: {account}</p>
         <p>Number of non defective Blub: {balance}</p>
-        <button onClick={summultiples}>To add 10 blub in defective list</button>
-        <button onClick={oddeven}>To fix 10 blub</button>
+        <button onClick={defective}>To add 10 blub in defective list</button>
+        <button onClick={fix}>To fix 5 blub</button>
       </div>
     )
   }
