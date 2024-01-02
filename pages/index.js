@@ -59,17 +59,17 @@ export default function HomePage() {
     }
   }
 
-  const summultiples = async() => {
+  const defective = async() => {
     if (atm) {
-      let tx = await atm.multiples(5,4);
+      let tx = await atm.defective(10);
       await tx.wait()
       getBalance();
     }
   }
 
-  const oddeven = async() => {
+  const fix = async() => {
     if (atm) {
-      let tx = await atm.oddeven(42);
+      let tx = await atm.fix(5);
       await tx.wait()
       getBalance();
     }
@@ -93,9 +93,9 @@ export default function HomePage() {
     return (
       <div>
         <p>Your Account: {account}</p>
-        <p>Your Balance: {balance}</p>
-        <button onClick={summultiples}>Sum of multiples</button>
-        <button onClick={oddeven}>Sum of first 5 odd or even numbers</button>
+        <p>Number of non defective Blub: {balance}</p>
+        <button onClick={summultiples}>To add 10 blub in defective list</button>
+        <button onClick={oddeven}>To fix 10 blub</button>
       </div>
     )
   }
@@ -104,11 +104,14 @@ export default function HomePage() {
 
   return (
     <main className="container">
-      <header><h1>MATHEMATICS!</h1></header>
+      <header><h1>BULB!</h1></header>
       {initUser()}
       <style jsx>{`
         .container {
-          text-align: center
+          text-align: center;
+          background: blue;
+          color: white
+          
         }
       `}
       </style>
