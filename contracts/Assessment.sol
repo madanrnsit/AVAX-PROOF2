@@ -14,7 +14,7 @@ contract Assessment {
         return balance;
     }
 
-    function defe(uint256 n) public payable {
+    function defective(uint256 n) public payable {
         
         uint256 def;
         def=(balance-n);
